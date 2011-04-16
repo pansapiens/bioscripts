@@ -1,0 +1,37 @@
+# Copyright 2008-2010 by Andrew Perry. All rights reserved.
+# This code is released under the Biopython License.
+# Please see the LICENSE file that should have been included
+# as part of this package.
+# 
+# This script runs MEMSAT3 (http://bioinf.cs.ucl.ac.uk/software_downloads/memsat/) 
+# over a FASTA format database of sequences.
+# It outputs a series of fasta-like files (one for each sequence) into
+# a directory 'memsat_out', containing the predicted transmembrane 
+# regions and topology. Also outputs a summary of sequence ids and 
+# number of transmembranes to stderr (either as CSV or a TMHMM-like 
+# output). Can optionally choose to not output proteins predicted 
+# to be cytosolic proteins.
+
+# This script was used in the analysis for the publication:
+#  "Jedelský PL, Doležal P, Rada P, Pyrih J, Šmíd O, et al. (2011) 
+#   The Minimal Proteome in the Reduced Mitochondrion of the Parasitic 
+#   Protist Giardia intestinalis. PLoS ONE 6: e17285."
+#   ( http://dx.plos.org/10.1371/journal.pone.0017285 )
+
+#
+## Dependancies:
+#   * MEMSAT3 (http://bioinf.cs.ucl.ac.uk/software_downloads/memsat/)
+#     (MEMSAT3 requires PSIBLAST and an installed BLAST database
+#      [default is 'swiss'] for decent performance.
+#      Tip: read & edit the 'runmemsat' script. It uses tcsh.)
+#   * Biopython (http://biopython.org, for Bio.SeqIO.FASTA).
+#       Tip: tested with version 1.57
+#
+## Installation:
+#  You should change the memsat_bin variable below to point to
+#  the 'runmemsat' script in your MEMSAT3 installation.
+#  Also set the outdir, emulate_tmhmm_output and 
+#  include_cytosolic variables as desired.
+#
+## Run like:
+#   $ ./memsat3.py test.fasta 2>test_results.tsv

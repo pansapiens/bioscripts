@@ -1,0 +1,5 @@
+./memsat3.py:115: DeprecationWarning: os.popen3 is deprecated.  Use the subprocess module.
+  i, o, e = os.popen3("nice " + memsat_bin + " tmpseq.fasta")
+TVAG_039960	6	
+TVAG_239840	12	
+TVAG_044560	0	#
