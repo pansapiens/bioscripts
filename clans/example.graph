@@ -1,0 +1,47 @@
+ID	NAME	X	Y
+0	gi|71745278|ref|XP_827269.1| hypothetical protein [Trypanosoma brucei TREU927]	0.07272519	0.33207884
+1	gi|71659630|ref|XP_821536.1| hypothetical protein [Trypanosoma cruzi strain CL Brener]	0.030424245	0.35330263
+2	gi|146102135|ref|XP_001469291.1| hypothetical protein [Leishmania infantum]	0.0	0.30711693
+3	gi|322495731|emb|CBZ31037.1| conserved hypothetical protein [Leishmania mexicana MHOM/GT/2001/U1103]	0.12065743	0.32198292
+4	gi|72549827|ref|XP_843590.1| hypothetical protein [Leishmania major strain Friedlin]	0.047160115	0.31506333
+5	gi|154345277|ref|XP_001568580.1| hypothetical protein [Leishmania braziliensis MHOM/BR/75/M2904]	0.08765935	0.28501153
+6	gi|283786898|ref|YP_003366763.1| putative outer membrane protein assembly factor [Citrobacter rodentium ICC168] ytfm	0.50413096	0.14628856
+7	gi|242379746|emb|CAQ34571.1| ytfM [Escherichia coli BL21(DE3)] ytfm	0.41275844	0.09820003
+8	gi|206581036|ref|YP_002240823.1| outer membrane protein, OMP85 family [Klebsiella pneumoniae 342] ytfm	0.5529857	0.11306115
+9	gi|198283734|ref|YP_002220055.1| surface antigen (D15) [Acidithiobacillus ferrooxidans ATCC 53993] ytfm	0.6559699	0.07261926
+10	gi|283477009|emb|CAY72901.1| Uncharacterized protein ytfM precursor [Erwinia pyrifoliae DSM 12163] ytfm	0.51805717	0.09708935
+11	gi|52842033|ref|YP_095832.1| outer membrane protein [Legionella pneumophila subsp. pneumophila str. Philadelphia 1]	0.6236875	0.057946935
+12	gi|117620359|ref|YP_856091.1| OMP85 family outer membrane protein [Aeromonas hydrophila subsp. hydrophila ATCC 7966] ytfm	0.5745225	0.067111
+13	gi|152989459|ref|YP_001348054.1| hypothetical protein PSPA7_2694 [Pseudomonas aeruginosa PA7] ytfm	0.6714601	0.10197099
+14	gi|78049862|ref|YP_366037.1| putative outer membrane protein [Xanthomonas campestris pv. vesicatoria str. 85-10] ytfm	0.6233013	0.13019386
+15	gi|297581391|ref|ZP_06943314.1| conserved hypothetical protein [Vibrio cholerae RC385] ytfm	0.45337075	0.04905212
+16	gi|15603674|ref|NP_246748.1| hypothetical protein PM1809 [Pasteurella multocida subsp. multocida str. Pm70] ytfm	0.46455035	0.10193703
+17	gi|33591429|ref|NP_879073.1| hypothetical protein BP0183 [Bordetella pertussis Tohama I] ytfm	0.8343324	0.02000373
+18	gi|15677947|ref|NP_275119.1| hypothetical protein NMB2134 [Neisseria meningitidis MC58] ytfm	0.702	0.0
+19	gi|242376008|emb|CAQ30691.1| yaeT [Escherichia coli BL21(DE3)] yaet	0.9275638	0.23428822
+20	gi|206578332|ref|YP_002240335.1| outer membrane protein assembly complex, YaeT protein [Klebsiella pneumoniae 342] yaet	0.88841176	0.25789356
+21	gi|283783961|ref|YP_003363826.1| outer membrane protein assembly factor [Citrobacter rodentium ICC168] yaet	0.91394085	0.2493596
+22	gi|198283292|ref|YP_002219613.1| outer membrane protein assembly complex, YaeT protein [Acidithiobacillus ferrooxidans ATCC 53993] yaet	0.80004907	0.23759727
+23	gi|283477390|emb|CAY73306.1| Outer membrane protein assembly factor yaeT precursor [Erwinia pyrifoliae DSM 12163] yaet	0.90046144	0.24059881
+24	gi|52840751|ref|YP_094550.1| outer membrane protein [Legionella pneumophila subsp. pneumophila str. Philadelphia 1] yaet	0.8766867	0.20596759
+25	gi|117620894|ref|YP_855722.1| OMP85 family outer membrane protein [Aeromonas hydrophila subsp. hydrophila ATCC 7966] yaet	0.9385614	0.21575698
+26	gi|152986344|ref|YP_001346875.1| outer membrane protein assembly complex, YaeT protein [Pseudomonas aeruginosa PA7] yaet	0.9092936	0.21627364
+27	gi|78047026|ref|YP_363201.1| outer membrane antigen [Xanthomonas campestris pv. vesicatoria str. 85-10] yaet	0.834287	0.22121745
+28	gi|297580895|ref|ZP_06942820.1| surface antigen [Vibrio cholerae RC385] yaet	0.8502883	0.24295999
+29	gi|15603857|ref|NP_246931.1| hypothetical protein PM1992 [Pasteurella multocida subsp. multocida str. Pm70] yaet	1.0	0.2354918
+30	gi|33592525|ref|NP_880169.1| surface antigen [Bordetella pertussis Tohama I] yaet	0.8540023	0.21445222
+31	gi|15676109|ref|NP_273240.1| outer membrane protein OMP85 [Neisseria meningitidis MC58] yaet	0.88453287	0.19857872
+32	EtpB t5ssb	0.37679866	0.9861978
+33	CdiB t5ssb	0.4936972	0.79731756
+34	OtpB t5ssb	0.6002273	0.91000575
+35	HlyB t5ssb	0.4061649	0.9148831
+36	gi|167399225|ref|ZP_02304749.1| putative lipoprotein [Yersinia pestis biovar Antiqua str. UG05-0454] t5ssb	0.4817603	0.99960864
+37	gi|145640190|ref|ZP_01795774.1| heme/hemopexin-binding protein B [Haemophilus influenzae R3021] t5ssb	0.5934131	1.0
+38	gi|206565225|gb|ACI07001.1| haemolysin secretion/activation protein, ShlB/FhaC/HecB family [Klebsiella pneumoniae 342] t5ssb	0.53231776	0.82250154
+39	gi|1772622|gb|AAC31980.1| HecB [Erwinia chrysanthemi] t5ssb	0.43844876	0.8370696
+40	gi|22125590|ref|NP_669013.1| hemolysin activator protein [Yersinia pestis KIM 10] t5ssb	0.47088912	0.88512695
+41	gi|238893712|ref|YP_002918446.1| putative hemolysin activator HlyB [Klebsiella pneumoniae NTUH-K2044] t5ssb	0.5141477	0.95591116
+42	gi|313840|emb|CAA46092.1| FhaC haemolysin-like protein precursor [Bordetella pertussis] t5ssb	0.17059337	0.8284995
+43	gi|224022374|gb|ACN32761.1| hemolysin/hemagglutinin activator protein [Neisseria meningitidis] t5ssb	0.3086923	0.9386818
+44	gi|68058481|gb|AAX88734.1| HMW1B, OMP-85-like protein required for secretion of HMW1A and HMW2A [Haemophilus influenzae 86-028NP] t5ssb	0.8655869	0.8223247
+45	gi|115279616|gb|ABI85301.1| MchB [Moraxella catarrhalis] t5ssb	0.36337885	0.91530114
