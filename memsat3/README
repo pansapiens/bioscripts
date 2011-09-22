@@ -12,11 +12,17 @@
 # output). Can optionally choose to not output proteins predicted 
 # to be cytosolic proteins.
 
-# This script was used in the analysis for the publication:
+# This script was used in the analysis for the publications:
 #  "Jedelský PL, Doležal P, Rada P, Pyrih J, Šmíd O, et al. (2011) 
 #   The Minimal Proteome in the Reduced Mitochondrion of the Parasitic 
-#   Protist Giardia intestinalis. PLoS ONE 6: e17285."
+#   Protist Giardia intestinalis. PLoS ONE 6:e17285."
 #   ( http://dx.plos.org/10.1371/journal.pone.0017285 )
+#
+#  "Rada P, Doležal P, Jedelský PL, Bursac D, Perry AJ, Šedinová M, 
+#   Smíšková K, Novotný M, Beltrán NC, Hrdý I, Lithgow T, Tachezy J. (2011)
+#   The Core Components of Organelle Biogenesis and Membrane Transport 
+#   in the Hydrogenosomes of Trichomonas vaginalis. PLoS ONE 6:e24428."
+#   ( http://dx.plos.org/10.1371/journal.pone.0024428 )
 
 #
 ## Dependancies:
