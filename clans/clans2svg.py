@@ -19,6 +19,8 @@
 # Dependencies: 
 #    CLANS       : http://bioinfoserver.rsbs.anu.edu.au/programs/clans/
 #    SVGFig (2.x): http://code.google.com/p/svgfig/
+#                  (svgfig-2.0.0alpha1 works on Ubuntu 11.04 ...
+#                   svgfig-2.0.0alpha2, not so well)
 #
 # Usage:
 # $ ./clans2svg.py example.blast example.graph >graph.svg
@@ -39,7 +41,7 @@ import sys
 try:
   from svgfig.interactive import *
 except:
-  sys.stderr.write("ERROR: clans2svg.py requires SVGFig 2.x ( http://code.google.com/p/svgfig/ )\n")
+  sys.stderr.write("ERROR: clans2svg.py requires SVGFig 2.x ( http://code.google.com/p/svgfig/ )\n Try svgfig-2.0.0alpha1 on Ubuntu 11.04.")
   sys.exit()
 
 def getNodeXY(id):
