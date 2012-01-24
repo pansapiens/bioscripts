@@ -1,0 +1,116 @@
+Setup and Installation
+======================
+
+Taxon requires a database to populate with taxonomy data. By default, taxon uses
+a MySQL database populated with the NCBI taxonomic tree. (There is also support
+for SQLite, however this seems to be broken at the moment [?] and is very slow 
+anyhow).
+
+This is how I setup the Taxon MySQL database on Ubuntu/Debian (if you are already 
+comfortable setting up a MySQL database server, feel free to do it any way you like).
+
+Dependencies
+------------
+If you don't already have a MySQL server:
+ 
+    $ sudo apt-get install mysql-server
+
+You may also find phpMyAdmin useful if you prefer web interfaces instead of the
+command line:
+
+    $ sudo apt-get install phpmyadmin
+
+The Taxon also requires SQLObject (http://www.sqlobject.org/), the Python 
+MySQLdb module, the Python SOAPpy module and Biopython (http://www.biopython.org/) 
+so install those too:
+
+    $ sudo apt-get install python-sqlobject python-mysqldb python-soappy python-biopython
+
+    (or $ pip install sqlobject soappy MySQL-python biopython==1.55)
+
+NOTE: Taxon was written against an older version of Biopython (1.55), and newer 
+versions dropped the Bio.SwissProt.SProt module used here.
+If you set USE_BIOPYTHON_SPROT_PARSER = False (default) in taxon_config.py,
+the Uniprot web service will be used instead of this parser.
+
+### Editing the config file
+
+Edit taxon_config.py as appropriate.
+
+### Setting up the and populating the database
+
+### Populating the database
+
+You can either populate your database using the provided MySQL dump, or by
+parsing the latest taxonomy files from NCBI. For most purposes, the MySQL
+dump should be fine.
+
+#### Populating from the MySQL dump - command line
+
+Create the database (edit create_taxonomy_db.sql if you want to change the 
+password or username):
+
+    $ cat create_taxonomy_db.sql | mysql -u root -p
+    (enter root password for admin access to MySQL)
+
+    $ cat taxonomy_mysql_dump_181111.sql.bz2 | bunzip2 | mysql -u taxonomy -p taxonomy
+    (enter the super_secret_password for the 'taxonomy' user)
+
+#### Populating from the MySQL dump - phpmyadmin
+
+Alternatively, this can also be done in the phpmyadmin web interface.
+
+Web browse to: http://localhost/phpmyadmin
+Login as root with the password you set for the MySQL server during installation.
+
+Use Phpmyadmin to create a new user and database by clicking on "Privileges" 
+and then "Add a new User". Remember to check the option "Create database with 
+same name and grant all privileges". The username and database should be 
+'taxonomy' (or whatever you have defined as the mysql_user and dbname in 
+create_taxonomy_db.py). Password should be the same as mysql_pass in 
+create_taxonomy_db.py.
+
+You can now import taxonomy_mysql_dump_181111.sql.bz2 by going to 
+Databases(tab) -> taxonomy(in table) -> Import(tab)
+
+#### Populating using the latest NCBI taxonomy
+
+Download the taxonomy data from ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz 
+and unpack the tarball to the path defined in DB_NAMES and DB_NAMES 
+(eg /data/databases/taxonomy/).
+
+Create the 'taxonomy' database as outlined above, but don't populate it from 
+the mysql_dump, instead run:
+
+    $ ./create_taxonomy_db.py
+
+Using Taxon
+-----------
+To use taxon, you must first start taxon_server.py, which is a SOAP server that 
+accesses the sqlite or MySQL taxonomy database and communicates over the 
+network with taxon_client.py via the SOAP protocol.
+
+The program taxon_client.py is used to 'tag' the sequence descriptions in a 
+fasta format file with a 'kingdom code'. The 'tagged' file is dumped to stdout 
+in fasta format.
+
+Run it like: 
+
+    $ ./taxon_client.py myblasthits.fasta >myblasthits_kingdom.fasta
+
+You can try the test data like: 
+
+    $ ./taxon_client.py tests/taxontest.fasta
+
+taxon_client.py requires that the fasta format sequence descriptions contain the 
+NCBI taxonomy species name between square brackets (eg [Homo sapiens]). 
+This is the format of sequences derived from an HHsenser (or BLAST ?) search.
+
+taxon_client_uniprot.py is similar, but looks up organism names for sequences with
+Uniprot ID's when there is no [genus species] recorded in the header. I uses 
+the Uniprot webservice (or a local copy) to look up missing species names. 
+It's possible that errors/missing taxonomy assigments will occur if the NCBI 
+organism naming differs from than in Uniprot.
+
+Edit taxon_config.py to change the kingdom codes used (see variable 
+SUPERKINGDOMS and KINGDOMS).
